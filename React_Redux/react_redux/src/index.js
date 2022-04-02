@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, compose } from 'redux';
+import MainReducer from './reducers/MainReducer';
+import CreateTodo from './components/CreateTodo';
+import Table from './container/Table';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+export { unstable_batchedUpdates } from 'react-dom';
+
+const store = compose(window.devToolsExtension ? window.devToolsExtension() : (f) => f)(createStore)(MainReducer);
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

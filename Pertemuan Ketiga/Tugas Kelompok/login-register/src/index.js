@@ -20,7 +20,7 @@ import reportWebVitals from './reportWebVitals';
 // }
 
 // ReactDOM.render(<FrmLogin />, document.getElementById('root'));
-ReactDOM.render(<FormRegister />, document.getElementById('root'));
+ReactDOM.render(<FrmLogin />, document.getElementById('root'));
 // ReactDOM.render(
 //   <React.StrictMode>
 //     <App />
