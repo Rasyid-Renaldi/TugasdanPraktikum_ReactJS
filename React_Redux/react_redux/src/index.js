@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, compose } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import MainReducer from './reducers/MainReducer';
 import CreateTodo from './container/CreateTodo';
 import Table from './container/Table';
